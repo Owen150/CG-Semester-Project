@@ -1,4 +1,4 @@
-# CG-Semester-Project
+# Brutal Doom
 Computer Graphics Semester Project
 First Person Shooter Game using Unity Game Engine and WebGL
 
