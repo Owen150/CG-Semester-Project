@@ -6,8 +6,7 @@ First Person Shooter Game using Unity Game Engine and WebGL
 The aim of this project is to create a first-person shooter game using WebGL for rendering and interacting with the game at web-level graphics and Python for the backend logic.
 
 # Specifications
-The game design will include levels, characters, weapons, and other assets. We will use 3D Modelling software to create and export 3D Models and textures.
-Milestones
+The game design will include levels, characters, weapons, and other assets. We will use a 3D Modelling software to create and export 3D Models and textures.
 
 # Classic FPS controls: 
 Move the mouse to look and turn around and Use AWSD keys to move your character to shoot press the left mouse button.
