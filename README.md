@@ -1,5 +1,3 @@
-# CG-Semester-Project
-
 # Brutal Doom
 A first-person Shooter game using WebGL, Pycharm, and three.js
 
