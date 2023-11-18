@@ -6,7 +6,7 @@ from texture_id import ID
 # opengl
 MAJOR_VERSION = 3
 MINOR_VERSION = 3
-DEPTH_SIZE =24
+DEPTH_SIZE = 24
 
 # resolution
 WIN_RES = glm.vec2(1280, 720)
