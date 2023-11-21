@@ -90,13 +90,16 @@ class Player(Camera):
     def check_hit_on_npc(self):
         if WEAPON_SETTINGS[self.weapon_id]['miss_probability'] > random.random():
             return None
+        npc_pos = self.eng.ray_casting.run(
+            start_pos=self.position,
+            direction=self.forward,
+            max_dist=WEAPON_SETTINGS[self.weapon_id]['max_dist'],
+            npc_to_player_flag=False
+        )
 
-        if npc_pos := self.eng.ray_casting.run(
-                start_pos=self.position,
-                direction=self.forward,
-                max_dist=WEAPON_SETTINGS[self.weapon_id]['max_dist'],
-                npc_to_player_flag=False
-        ):
+        if npc_pos:
+            # Your code block when the condition is True
+            pass  # Placeholder for your code
             npc = self.eng.level_map.npc_map[npc_pos]
             npc.get_damage()
 
@@ -224,4 +227,3 @@ class Player(Camera):
             return self.door_map[int_pos].is_closed
         # check walls
         return int_pos in self.wall_map
-    
