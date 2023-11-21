@@ -11,7 +11,6 @@ class PathFinder:
         self.graph = {}
         self.update_graph()
 
-    @lru_cache
     def find(self, start_pos, end_pos):
         visited = self.bfs(start_pos, end_pos)
         path = [end_pos]

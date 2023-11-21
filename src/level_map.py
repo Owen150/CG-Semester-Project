@@ -36,16 +36,19 @@ class LevelMap:
 
         for ix in range(self.width):
             for iz in range(self.depth):
-                if gid := walls.data[iz][ix]:
+                if walls.data[iz][ix]:
                     # wall hash map
+                    gid = walls.data[iz][ix]
                     self.wall_map[(ix, iz)] = self.get_id(gid)
 
-                if gid := floors.data[iz][ix]:
+                if floors.data[iz][ix]:
                     # floor hash map
+                    gid = floors.data[iz][ix]
                     self.floor_map[(ix, iz)] = self.get_id(gid)
 
-                if gid := ceilings.data[iz][ix]:
-                    # ceiling  hash map
+                if ceilings.data[iz][ix]:
+                    # ceiling hash map
+                    gid = ceilings.data[iz][ix]
                     self.ceil_map[(ix, iz)] = self.get_id(gid)
 
         # get doors

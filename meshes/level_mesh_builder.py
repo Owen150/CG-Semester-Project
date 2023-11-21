@@ -54,7 +54,8 @@ class LevelMeshBuilder:
         for x in range(self.map.width):
             for z in range(self.map.depth):
                 # flats
-                if pos_not_in_wall_map := (x, z) not in self.map.wall_map:
+                pos_not_in_wall_map = (x, z) not in self.map.wall_map
+                if pos_not_in_wall_map:
                     # get ao id
                     ao = self.get_ao(x, z, plane='Y')
                     flip_id = ao[1] + ao[3] > ao[0] + ao[2]
