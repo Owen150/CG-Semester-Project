@@ -4,6 +4,7 @@ from src.settings import H_WALL_SIZE
 
 class GameObject:
     def __init__(self, level_map, tex_id, x, z):
+        self.level_map = level_map
         self.eng = level_map.eng
         self.app = self.eng.app
         self.tex_id = tex_id
