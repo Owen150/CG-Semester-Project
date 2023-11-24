@@ -1,10 +1,10 @@
 #version 330 core
 
-layout (location = 0) in vec3 in_position;
-layout (location = 1) in int in_tex_id;
-layout (location = 2) in int face_id;
-layout (location = 3) in int ao_id;
-layout (location = 4) in int flip_id;
+layout(location = 0) in vec3 in_position;
+layout(location = 1) in int in_tex_id;
+layout(location = 2) in int face_id;
+layout(location = 3) in int ao_id;
+layout(location = 4) in int flip_id;
 
 uniform mat4 m_proj, m_view;
 

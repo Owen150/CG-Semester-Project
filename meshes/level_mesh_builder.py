@@ -9,13 +9,13 @@ class LevelMeshBuilder:
 
     def get_ao(self, x, z, plane):
         if plane == 'Y':
-            a = not self.is_blocked(x, z - 1)
+            a = not self.is_blocked(x    , z - 1)
             b = not self.is_blocked(x - 1, z - 1)
-            c = not self.is_blocked(x - 1, z)
+            c = not self.is_blocked(x - 1, z    )
             d = not self.is_blocked(x - 1, z + 1)
-            e = not self.is_blocked(x, z + 1)
+            e = not self.is_blocked(x    , z + 1)
             f = not self.is_blocked(x + 1, z + 1)
-            g = not self.is_blocked(x + 1, z)
+            g = not self.is_blocked(x + 1, z    )
             h = not self.is_blocked(x + 1, z - 1)
 
         elif plane == 'X':
@@ -64,10 +64,10 @@ class LevelMeshBuilder:
                         tex_id = self.map.floor_map[(x, z)]
                         face_id = 0
 
-                        v0 = (x, 0, z, tex_id, face_id, ao[0], flip_id)
-                        v1 = (x + 1, 0, z, tex_id, face_id, ao[1], flip_id)
+                        v0 = (x    , 0, z    , tex_id, face_id, ao[0], flip_id)
+                        v1 = (x + 1, 0, z    , tex_id, face_id, ao[1], flip_id)
                         v2 = (x + 1, 0, z + 1, tex_id, face_id, ao[2], flip_id)
-                        v3 = (x, 0, z + 1, tex_id, face_id, ao[3], flip_id)
+                        v3 = (x    , 0, z + 1, tex_id, face_id, ao[3], flip_id)
 
                         if flip_id:
                             index = self.add_data(vertex_data, index, v1, v0, v3, v1, v3, v2)
@@ -79,10 +79,10 @@ class LevelMeshBuilder:
                         tex_id = self.map.ceil_map[(x, z)]
                         face_id = 1
 
-                        v0 = (x, 1, z, tex_id, face_id, ao[0], flip_id)
-                        v1 = (x + 1, 1, z, tex_id, face_id, ao[1], flip_id)
+                        v0 = (x    , 1, z    , tex_id, face_id, ao[0], flip_id)
+                        v1 = (x + 1, 1, z    , tex_id, face_id, ao[1], flip_id)
                         v2 = (x + 1, 1, z + 1, tex_id, face_id, ao[2], flip_id)
-                        v3 = (x, 1, z + 1, tex_id, face_id, ao[3], flip_id)
+                        v3 = (x    , 1, z + 1, tex_id, face_id, ao[3], flip_id)
 
                         if flip_id:
                             index = self.add_data(vertex_data, index, v1, v3, v0, v1, v2, v3)
@@ -101,8 +101,8 @@ class LevelMeshBuilder:
                     ao = self.get_ao(x, z - 1, plane='Z')
                     flip_id = ao[1] + ao[3] > ao[0] + ao[2]
 
-                    v0 = (x, 0, z, tex_id, face_id, ao[0], flip_id)
-                    v1 = (x, 1, z, tex_id, face_id, ao[1], flip_id)
+                    v0 = (x    , 0, z, tex_id, face_id, ao[0], flip_id)
+                    v1 = (x    , 1, z, tex_id, face_id, ao[1], flip_id)
                     v2 = (x + 1, 1, z, tex_id, face_id, ao[2], flip_id)
                     v3 = (x + 1, 0, z, tex_id, face_id, ao[3], flip_id)
 
@@ -117,8 +117,8 @@ class LevelMeshBuilder:
                     ao = self.get_ao(x, z + 1, plane='Z')
                     flip_id = ao[1] + ao[3] > ao[0] + ao[2]
 
-                    v0 = (x, 0, z + 1, tex_id, face_id, ao[0], flip_id)
-                    v1 = (x, 1, z + 1, tex_id, face_id, ao[1], flip_id)
+                    v0 = (x    , 0, z + 1, tex_id, face_id, ao[0], flip_id)
+                    v1 = (x    , 1, z + 1, tex_id, face_id, ao[1], flip_id)
                     v2 = (x + 1, 1, z + 1, tex_id, face_id, ao[2], flip_id)
                     v3 = (x + 1, 0, z + 1, tex_id, face_id, ao[3], flip_id)
 
@@ -133,8 +133,8 @@ class LevelMeshBuilder:
                     ao = self.get_ao(x + 1, z, plane='X')
                     flip_id = ao[1] + ao[3] > ao[0] + ao[2]
 
-                    v0 = (x + 1, 0, z, tex_id, face_id, ao[0], flip_id)
-                    v1 = (x + 1, 1, z, tex_id, face_id, ao[1], flip_id)
+                    v0 = (x + 1, 0, z    , tex_id, face_id, ao[0], flip_id)
+                    v1 = (x + 1, 1, z    , tex_id, face_id, ao[1], flip_id)
                     v2 = (x + 1, 1, z + 1, tex_id, face_id, ao[2], flip_id)
                     v3 = (x + 1, 0, z + 1, tex_id, face_id, ao[3], flip_id)
 
@@ -149,8 +149,8 @@ class LevelMeshBuilder:
                     ao = self.get_ao(x - 1, z, plane='X')
                     flip_id = ao[1] + ao[3] > ao[0] + ao[2]
 
-                    v0 = (x, 0, z, tex_id, face_id, ao[0], flip_id)
-                    v1 = (x, 1, z, tex_id, face_id, ao[1], flip_id)
+                    v0 = (x, 0, z    , tex_id, face_id, ao[0], flip_id)
+                    v1 = (x, 1, z    , tex_id, face_id, ao[1], flip_id)
                     v2 = (x, 1, z + 1, tex_id, face_id, ao[2], flip_id)
                     v3 = (x, 0, z + 1, tex_id, face_id, ao[3], flip_id)
 
