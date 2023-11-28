@@ -1,5 +1,5 @@
 # 3D-FPS-Shooting-Game
-**DOOM** is a **3 dimensional first person shooter (FPS) shooting game** which uses the **raycasting algorithm** to generate a pseudo 3D environment and **pathfinding algorithm** for smart player enemy interaction. It is built using **Pygame** module in **Python** and takes advantage of the raycasting algorithm to make 3D gameplay despite not being a 3D game engine unlike Unity, Unreal, Godot and others that are available in the market.
+**DOOM** is a **3 dimensional first person shooter (FPS) shooting game** which uses the **raycasting algorithm** to generate a pseudo 3D environment and **pathfinding algorithm** for smart player enemy interaction. It is built using **Pygame** module in **Python** and takes advantage of the raycasting algorithm to make 3D gameplay despite not being a 3D game engine unlike Unity, Unreal, Godot, and others that are available in the market.
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@
 - [Player Enemy interaction (Pathfinding)](#player-enemy-interaction-pathfinding)
 - [Enemies](#enemies)
 - [Final Gameplay](#final-gameplay)
+- [Installation]
 
 ### Player movement
 Initially, we built the player movements, which are based on any classic FPS shooting game, WASD keys for front, back, left, and right directions respectively, and left, and right arrow keys or mouse for the rotation of the player at that particular position.
@@ -35,3 +36,9 @@ The first idea is that the enemy follows the player once the player is in line o
 The drawback of the above method is that the enemy tries to follow the player along the line connecting the enemy and the player, but when the player moves behind the wall the enemy tries to follow the player along the line through the wall but because of the presence of the wall is unable to do so, which looks stupid as we want our enemy to be smart and be able to navigate through the obstacles to reach the player through the shortest path possible. 
 
 The enemy should be able to determine a workaround to reach the player once encountered with walls and this can be achieved via a pathfinding algorithm called breadth-first search (BFS).
+
+### How to Run
+git clone https://github.com/Owen150/CG-Semester-Project.git
+cd Pygame-FPS
+python3 -m pip install -r requirements.txt
+python3 main.py
