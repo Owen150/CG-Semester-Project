@@ -14,7 +14,6 @@
 ### Player movement
 Initially, we built the player movements, which are based on any classic FPS shooting game, WASD keys for front, back, left, and right directions respectively, and left, and right arrow keys or mouse for the rotation of the player at that particular position.
 
-Below is the implementation of the same (viewed in 2D perspective to confirm movement in the correct direction along with wall collisions, the green dot is the player and the yellow line is the line of sight of the player).
 
 ### Raycasting algorithm
 In the raycasting algorithm, I cast a fixed number of rays in the field of view of the player, if the field of view (FOV) angle is **X**, then the area visible to the player at a particular time would be equal to ***player's current angle (line of sight) - half of FOV angle (X/2)*** to ***player's current angle (line of sight) + half of FOV angle (X/2)***. The rays will be cast in this particular region till they meet an obstacle (wall) which will give the depth perspective of that particular point wrt the player. 
