@@ -10,7 +10,7 @@
 - [Player Enemy interaction (Pathfinding)](#player-enemy-interaction-pathfinding)
 - [Enemies](#enemies)
 - [Final Gameplay](#final-gameplay)
-- [Installation]
+- [Installation](#How-to-run)
 
 ### Player movement
 Initially, we built the player movements, which are based on any classic FPS shooting game, WASD keys for front, back, left, and right directions respectively, and left, and right arrow keys or mouse for the rotation of the player at that particular position.
@@ -38,7 +38,7 @@ The drawback of the above method is that the enemy tries to follow the player al
 The enemy should be able to determine a workaround to reach the player once encountered with walls and this can be achieved via a pathfinding algorithm called breadth-first search (BFS).
 
 ### How to Run
-git clone https://github.com/Owen150/CG-Semester-Project.git
-cd Pygame-FPS
-python3 -m pip install -r requirements.txt
-python3 main.py
+- git clone https://github.com/Owen150/CG-Semester-Project.git
+- cd Pygame-FPS
+- python3 -m pip install -r requirements.txt
+- python3 main.py
