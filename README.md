@@ -1,9 +1,5 @@
 # DOOM-3D-FPS-Shooting-Game
-**DOOM** is a **3 dimensional first person shooter (FPS) shooting game** which uses the **raycasting algorithm** to generate a pseudo 3D environment and **pathfinding algorithm** for smart player enemy interaction. It is built using **Pygame** module in **Python** and takes advantage of the raycasting algorithm to make a 3D gameplay despite not being a 3D game engine unlike Unity, Unreal, Godot and others that are available in the market.
-
-Below is the demonstration of the gameplay.
-
-![Gameplay](/photos/gameplay_1.gif)
+**DOOM** is a **3 dimensional first person shooter (FPS) shooting game** which uses the **raycasting algorithm** to generate a pseudo 3D environment and **pathfinding algorithm** for smart player enemy interaction. It is built using **Pygame** module in **Python** and takes advantage of the raycasting algorithm to make 3D gameplay despite not being a 3D game engine unlike Unity, Unreal, Godot and others that are available in the market.
 
 ## Table of Contents
 
